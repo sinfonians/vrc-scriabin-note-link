@@ -55,7 +55,7 @@ process-global arbiterとWindows named interprocess lockにより、VST3／Stand
 
 ### リリース判定
 
-自動テストは、周波数／ピッチクラス、倍音を含む入力、無音／ノイズ、heap allocation計測、mailbox整合性、OSC型／アドレス／lifecycle、古い検出、process内／process間所有権、processor透過性、Standalone無音、状態復元時の安全性を対象とします。ReleaseビルドはVST3とStandaloneの両方を生成します。実DAW、オーディオデバイス、画面表示、対応VRChatアバターは人間による確認項目です。
+自動テストは、周波数／ピッチクラス、倍音を含む入力、無音／ノイズ、heap allocation計測、mailbox整合性、OSC型／アドレス／lifecycle、古い検出、process内／process間所有権、processor透過性、Standalone無音、状態復元時の安全性を対象とします。ReleaseビルドはVST3とStandaloneの両方を生成します。
 
 ## English
 
@@ -112,4 +112,4 @@ A process-global arbiter and Windows named interprocess lock permit one Note Lin
 
 ### Release gates
 
-Automated tests cover frequency/pitch-class behavior, harmonic-rich inputs, silence/noise, heap-allocation instrumentation, mailbox consistency, OSC type/address/lifecycle, stale detection, in-process and interprocess ownership, processor transparency, Standalone silence, and safe state restoration. Release builds produce both VST3 and Standalone targets. Actual DAW behavior, audio-device behavior, visible layout, and a compatible avatar in VRChat remain human verification items.
+Automated tests cover frequency/pitch-class behavior, harmonic-rich inputs, silence/noise, heap-allocation instrumentation, mailbox consistency, OSC type/address/lifecycle, stale detection, in-process and interprocess ownership, processor transparency, Standalone silence, and safe state restoration. Release builds produce both VST3 and Standalone targets.
