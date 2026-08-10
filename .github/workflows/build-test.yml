@@ -1,4 +1,4 @@
-name: build-and-test
+name: ビルドとテスト / Build and test
 
 on:
   push:
@@ -13,11 +13,11 @@ jobs:
     runs-on: windows-2022
     timeout-minutes: 45
     steps:
-      - name: Check out source
+      - name: ソース取得 / Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - name: Configure
+      - name: 構成 / Configure
         run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DBUILD_TESTING=ON
-      - name: Build
+      - name: ビルド / Build
         run: cmake --build build --config Release --parallel 2
-      - name: Test
+      - name: テスト / Test
         run: ctest --test-dir build -C Release --output-on-failure

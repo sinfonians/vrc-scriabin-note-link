@@ -1,22 +1,22 @@
-name: Bug report
-description: Report a reproducible problem without attaching private audio or personal data.
-title: "[Bug]: "
+name: バグ報告 / Bug report
+description: 個人情報や非公開音声を添付せず、再現可能な問題を報告します。 / Report a reproducible problem without private audio or personal data.
+title: "[バグ / Bug]: "
 labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: Do not attach captured voice, private avatar packages, credentials, or personal information.
+      value: 録音音声、非公開アバターパッケージ、認証情報、個人情報を添付しないでください。 / Do not attach captured voice, private avatar packages, credentials, or personal information.
   - type: input
     id: version
     attributes:
-      label: Version
+      label: バージョン / Version
       placeholder: v1.0.0
     validations:
       required: true
   - type: dropdown
     id: format
     attributes:
-      label: Format
+      label: 形式 / Format
       options:
         - VST3
         - Standalone
@@ -25,19 +25,19 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: Reproduction steps
-      description: Use synthetic or non-sensitive test material where possible.
+      label: 再現手順 / Reproduction steps
+      description: 可能な限り合成音など機密性のない素材を使用してください。 / Use synthetic or non-sensitive test material where possible.
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
+      label: 期待する動作 / Expected behavior
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Actual behavior
+      label: 実際の動作 / Actual behavior
     validations:
       required: true

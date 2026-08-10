@@ -1,4 +1,16 @@
-Corresponding Source for VRC Scriabin Note Link v1.0.0
+VRC Scriabin Note Link v1.0.0 対応ソースコード / Corresponding Source
+
+[日本語]
+
+本パッケージ内バイナリの完全な対応ソースコードは、次の場所から無償で入手できます。
+
+https://github.com/sinfonians/vrc-scriabin-note-link/tree/v1.0.0
+
+リポジトリタグ `v1.0.0` は、このバイナリ公開版に対応する正確なソースを示します。ビルド手順と固定されたJUCEリビジョンはREADME.mdおよびCMakeLists.txtに記載されています。
+
+この案内は、リポジトリからバイナリ公開版が配布されている間、有効です。タグまたはリポジトリを利用できない場合は、リポジトリのセキュリティ報告経路から同等のソースコピーを依頼してください。
+
+[English]
 
 The complete Corresponding Source for the binaries in this package is available at no charge from:
 
