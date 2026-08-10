@@ -1,0 +1,9 @@
+Corresponding Source for VRC Scriabin Note Link v1.0.0
+
+The complete Corresponding Source for the binaries in this package is available at no charge from:
+
+https://github.com/sinfonians/vrc-scriabin-note-link/tree/v1.0.0
+
+The repository tag `v1.0.0` identifies the exact source used for this binary release. Build instructions and the pinned JUCE revision are in README.md and CMakeLists.txt.
+
+This offer remains valid for as long as the binary release is distributed from the repository. If the tag or repository becomes unavailable, use the repository's security-reporting route to request an equivalent source copy.
