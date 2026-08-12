@@ -4,9 +4,9 @@
 
 ## 日本語
 
-VRC Scriabin Note Linkは、単音の基音周波数を検出し、その音名（ピッチクラス）をOSCで対応VRChatアバターへ送る、小さなWindows用VST3／Standaloneツールです。
+VRC Scriabin Note Linkは、単音の基音周波数を検出し、その音名（ピッチクラス）をOSCで対応VRChatアバターへ送る、小さなWindows用スタンドアロン（単体アプリ）／VST3ツールです。
 
-声の加工、録音、アップロード、変換は行いません。VST3版は音声を変更せず、そのまま通過させます。Standalone版は選択した入力を解析しますが、ハウリング防止のため音声出力は常に無音です。
+声の加工、録音、アップロード、変換は行いません。スタンドアロン（単体アプリ）は選択した入力を解析しますが、ハウリング防止のため音声出力は常に無音です。VST3版は音声を変更せず、そのまま通過させます。
 
 本ツールは非公式のコミュニティ製ツールであり、VRChat Inc.との提携・承認関係はありません。
 
@@ -33,6 +33,14 @@ VRC Scriabin Note Linkは、単音の基音周波数を検出し、その音名�
 
 ### インストール
 
+#### スタンドアロン（単体アプリ）
+
+`VRC Scriabin Note Link.exe` を起動し、オーディオ設定でマイク／入力デバイスを選択してからOSCを有効にします。
+
+初回起動時などは、フィードバックループ防止の入力ミュート（ループバックミュート）が働き、`Audio input is muted to avoid feedback loop` と表示されます。基音検出を始めるには、画面の **Unmute Input** を押してループバックミュートを解除してください。
+
+入力ミュートを解除しても、スタンドアロン（単体アプリ）の音声出力は意図的に無音のままです。音声モニターではなく、検出・OSC送信用アプリです。
+
 #### VST3
 
 `VRC Scriabin Note Link.vst3` フォルダーを、通常のVST3保存先へコピーします。一般的な場所は次のとおりです。
@@ -43,12 +51,6 @@ C:\Program Files\Common Files\VST3
 
 DAWでプラグインを再スキャンし、ライブ入力トラックへ挿入して、エディター上でOSCを有効にします。
 
-#### Standalone
-
-`VRC Scriabin Note Link.exe` を起動し、オーディオ設定でマイク／入力デバイスを選択してからOSCを有効にします。
-
-Standalone版の音声出力は意図的に無音です。音声モニターではなく、検出・OSC送信用アプリです。
-
 ### VRChatでの使用
 
 1. VRChatのOSCを有効にします。
@@ -57,7 +59,7 @@ Standalone版の音声出力は意図的に無音です。音声モニターで�
 4. Note Linkを起動し、目的の入力でメーターが動くことを確認してからOSCを有効にします。
 5. 一度に1つの明瞭な音を歌う、または演奏します。
 
-異常終了後はStandalone版を再度開いて **All Off** を押すか、VRChat OSCを再起動してください。
+異常終了後はスタンドアロン（単体アプリ）を再度開いて **All Off** を押すか、VRChat OSCを再起動してください。
 
 ### Windowsのダウンロード警告
 
@@ -94,9 +96,9 @@ GNU Affero General Public License v3.0以降（AGPL-3.0-or-later）で公開し�
 
 ## English
 
-VRC Scriabin Note Link is a small Windows VST3 / Standalone tool that detects one monophonic fundamental frequency and sends its pitch class to a compatible VRChat avatar over OSC.
+VRC Scriabin Note Link is a small Windows Standalone application / VST3 tool that detects one monophonic fundamental frequency and sends its pitch class to a compatible VRChat avatar over OSC.
 
-It does **not** process, record, upload, or transform your voice. The VST3 passes audio through unchanged. The Standalone build analyzes the selected input but always outputs silence, reducing feedback risk.
+It does **not** process, record, upload, or transform your voice. The Standalone application analyzes the selected input but always outputs silence, reducing feedback risk. The VST3 passes audio through unchanged.
 
 This is an unofficial community tool and is not affiliated with or endorsed by VRChat Inc.
 
@@ -123,6 +125,14 @@ Only one pitch class is active at a time. Silence or an unreliable detection cle
 
 ### Installation
 
+#### Standalone application
+
+Run `VRC Scriabin Note Link.exe`, choose the microphone/input device in the audio settings, then enable OSC.
+
+On first launch and in similar reset states, audio input is muted to prevent a feedback loop and the application shows `Audio input is muted to avoid feedback loop`. Press **Unmute Input** to release the input mute and start fundamental detection.
+
+Even after you unmute the input, the Standalone application's audio output remains intentionally silent. It is a detector and OSC sender, not an audio monitor.
+
 #### VST3
 
 Copy the `VRC Scriabin Note Link.vst3` bundle to your normal VST3 location, commonly:
@@ -132,12 +142,6 @@ C:\Program Files\Common Files\VST3
 ```
 
 Rescan plug-ins in your DAW, insert it on the live input track, and enable OSC in the editor.
-
-#### Standalone
-
-Run `VRC Scriabin Note Link.exe`, choose the microphone/input device in the audio settings, then enable OSC.
-
-The Standalone output is intentionally silent. It is a detector and OSC sender, not an audio monitor.
 
 ### VRChat setup
 
