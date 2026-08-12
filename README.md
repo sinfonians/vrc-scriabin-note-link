@@ -82,10 +82,6 @@ ctest --test-dir build -C Release --output-on-failure
 
 構成時に、`CMakeLists.txt` に記録された正確なコミットのJUCE 8.0.6を取得します。
 
-### メンテナー向けパッケージ作成
-
-`tools/package-release.ps1` は、誤操作防止のため `P:\_tmp` 配下だけをステージング先として許可します。既定外のビルドディレクトリを使う場合は `-BuildRoot` を指定してください。別途安全性を検討せず、この境界を変更しないでください。
-
 ### 対象範囲
 
 Version 1は、単音の基音検出と12種類のピッチクラスOSC出力だけを提供します。和音検出、調・音階の推定、VSTプラグインの読み込み、音声加工は行いません。
@@ -173,10 +169,6 @@ ctest --test-dir build -C Release --output-on-failure
 ```
 
 JUCE 8.0.6 is fetched during configure at the exact commit recorded in `CMakeLists.txt`.
-
-### Maintainer release packaging
-
-`tools/package-release.ps1` intentionally permits staging only below `P:\_tmp`. This protects the source checkout and prevents accidental replacement of unrelated files. Override `-BuildRoot` when using a non-default build directory; do not change the staging boundary without a separate safety review.
 
 ### Scope
 
